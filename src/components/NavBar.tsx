@@ -27,9 +27,9 @@ const NavBar = () => {
         <div className="flex items-center justify-between h-16 sm:h-20">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <img 
-              src="/pulsepantry-logo.png" 
-              alt="Pulse Pantry Logo" 
+            <img
+              src="/pulse-pantry-logo-real.png"
+              alt="Pulse Pantry Logo"
               className="h-8 sm:h-10 w-auto"
             />
           </div>
