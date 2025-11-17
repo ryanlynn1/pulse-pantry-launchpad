@@ -19,17 +19,20 @@ const WaitlistForm = () => {
     return emailRegex.test(email);
   };
 
-  // Show success modal and auto-close after 10 seconds
+  // Show success modal (manual close only)
   useEffect(() => {
     if (status === 'success') {
       setShowSuccessModal(true);
-      const timer = setTimeout(() => {
-        setShowSuccessModal(false);
-        setStatus('idle');
-      }, 10000);
-      return () => clearTimeout(timer);
     }
   }, [status]);
+
+  // Handle modal close
+  const handleModalClose = (open: boolean) => {
+    setShowSuccessModal(open);
+    if (!open) {
+      setStatus('idle');
+    }
+  };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -129,7 +132,7 @@ const WaitlistForm = () => {
       )}
     </form>
 
-    <Dialog open={showSuccessModal} onOpenChange={setShowSuccessModal}>
+    <Dialog open={showSuccessModal} onOpenChange={handleModalClose}>
       <DialogContent className="sm:max-w-md">
         <DialogHeader className="text-center items-center space-y-4">
           <div className="mx-auto animate-scale-in">

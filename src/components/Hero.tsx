@@ -186,10 +186,10 @@ const Hero = () => {
         {/* Right column - Logo with green background, positioned higher */}
         <div className="relative bg-primary flex items-start justify-center px-4 sm:px-6 lg:px-8 pt-24 lg:pt-32 pb-12">
           <div className="relative z-10">
-            <img 
-              src="/pulse-pantry-logo-real.png" 
-              alt="Pulse Pantry Logo" 
-              className="w-full max-w-2xl h-auto drop-shadow-2xl"
+            <img
+              src="/pulse-pantry-logo-real.png"
+              alt="Pulse Pantry Logo"
+              className="w-full max-w-2xl h-auto drop-shadow-2xl rounded-lg"
             />
           </div>
         </div>
